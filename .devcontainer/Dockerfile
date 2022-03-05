@@ -28,5 +28,12 @@ RUN apt-get update && apt-get install -y \
   libsecret-1-0 \
   && rm -rf /var/lib/apt/lists/*
 
-RUN wget https://aka.ms/downloadazcopy-v10-linux; tar -xvf downloadazcopy-v10-linux; cp ./azcopy_linux_amd64_*/azcopy /usr/bin/; chmod 755 /usr/bin/azcopy
+RUN wget https://aka.ms/downloadazcopy-v10-linux \ 
+  && tar -xvf downloadazcopy-v10-linux \ 
+  && cp ./azcopy_linux_amd64_*/azcopy /usr/bin/ \
+  && chmod 755 /usr/bin/azcopy
+
+RUN wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb \
+  && sudo dpkg -i packages-microsoft-prod.deb \
+  && sudo apt-get update && sudo apt-get install azure-functions-core-tools-4
 
