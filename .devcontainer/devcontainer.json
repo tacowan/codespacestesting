@@ -23,7 +23,11 @@
 	
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"vscjava.vscode-java-pack"
+		"ms-vscode.vscode-node-azure-pack",
+		"vscjava.vscode-java-pack",
+		"humao.rest-client",
+		"hediet.vscode-drawio",
+		"bierner.markdown-mermaid"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

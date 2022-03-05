@@ -28,4 +28,5 @@ RUN apt-get update && apt-get install -y \
   libsecret-1-0 \
   && rm -rf /var/lib/apt/lists/*
 
-RUN wget https://aka.ms/downloadazcopy-v10-linux; tar -xvf downloadazcopy-v10-linux; cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
+RUN wget https://aka.ms/downloadazcopy-v10-linux; tar -xvf downloadazcopy-v10-linux; cp ./azcopy_linux_amd64_*/azcopy /usr/bin/; chmod 755 /usr/bin/azcopy
+
